@@ -1,7 +1,7 @@
-<h1>Portfolio</h1>
+<p align="center">
+  <a href="https://devraj-portfolio-one.vercel.app/">
+    <img src="./visit.png" width="120"/>
+  </a>
+</p>
 
-<p>Ponnitivalasa Devraj</p>
-
-<a href="https://devraj-portfolio-one.vercel.app/" target="_blank">
-  <img src="https://img.shields.io/badge/Visit-Portfolio-00CFFF?style=for-the-badge" />
-</a>
+<h3 align="center">🚀 Visit Portfolio</h3>
