@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Section } from "./Section";
-import gietImage from "@/assets/education-giet.svg";
-import schoolImage from "@/assets/education-school.svg";
+import GIETU from "../assets/gietu.jpg";
+import schoolImage from "../assets/education-school.svg";
 
 const education = [
   {
@@ -10,7 +10,7 @@ const education = [
     date: "2022 — 2026",
     description: "Passionate about learning VLSI, digital electronics, FPGA development, and integrating Agentic AI into next-generation hardware and semiconductor projects.",    
     score: "CGPA: 9.24",
-    image: gietImage,
+    image: GIETU,
   },
   {
     institution: "Maharshi Gurukul Higher Secondary School",
@@ -24,12 +24,7 @@ const education = [
     institution: "Jagannath Public School",
     degree: "Matriculation",
     date: "2019 — 2020",
-    description: (
-      <>
-        Studied at Jagannath Public School Gunupur; completed Class 10 board certification through
-        <span className="block font-semibold text-neon mt-1">ST Xavier High School</span>
-      </>
-    ),
+    description: "Studied at Jagannath Public School Gunupur; completed Class 10 board certification through ST Xavier High School.",
     score: "Percentage: 86.6%",
     image: schoolImage,
   },
