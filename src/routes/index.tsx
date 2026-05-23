@@ -40,7 +40,7 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-function Index() {
+export function Index() {
   return (
     <div className="relative min-h-screen">
       <Loader />
