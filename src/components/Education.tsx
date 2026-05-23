@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Section } from "./Section";
-import GIETU from "../assets/gietu.jpg";
-import schoolImage from "../assets/education-school.svg";
+import GIETU from "@/assets/gietu.jpg";
+import schoolImage from "@/assets/education-school.svg";
 
 const education = [
   {
