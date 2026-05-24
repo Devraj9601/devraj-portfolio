@@ -1,7 +1,6 @@
-import { motion } from "framer-motion";
 import { Section } from "./Section";
-import GIETU from "@/assets/gietu.jpg";
-import schoolImage from "@/assets/education-school.svg";
+import GIETU from "../assets/gietu.jpg";
+import schoolImage from "../assets/education-school.svg";
 
 const education = [
   {
@@ -40,14 +39,9 @@ export function Education() {
     >
       <div className="grid gap-5 lg:grid-cols-3">
         {education.map((entry, index) => (
-          <motion.article
+          <article
             key={entry.institution}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.08 }}
-            whileHover={{ y: -6 }}
-            className="group glass rounded-2xl border border-neon/10 overflow-hidden hover:border-neon/40 hover:neon-glow transition-all"
+            className="group glass rounded-2xl border border-neon/10 overflow-hidden hover:border-neon/40 hover:neon-glow transition-all transform-gpu hover:-translate-y-1"
           >
             <div className="relative aspect-[4/3] overflow-hidden bg-muted">
               <img
@@ -67,7 +61,7 @@ export function Education() {
                 <p className="mt-3 text-sm font-semibold text-neon"><span className="mr-2">✓</span>{entry.score}</p>
               ) : null}
             </div>
-          </motion.article>
+          </article>
         ))}
       </div>
     </Section>
