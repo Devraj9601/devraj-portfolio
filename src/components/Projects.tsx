@@ -3,6 +3,8 @@ import { Github, ExternalLink } from "lucide-react";
 import { Section } from "./Section";
 import fpga from "@/assets/project-fpga.png";
 import wildlife from "@/assets/project-wildlife.png";
+import cmos2_1 from "@/assets/project-cmos2_1.png";
+
 
 const projects = [
   {
@@ -22,6 +24,15 @@ const projects = [
     img: wildlife,
     codeUrl: "https://github.com/Devraj9601/Wildlife-safety-system.git",
     demoUrl: "https://www.linkedin.com/posts/ponnitivalasadevraj-i050431_innovation-wildlifeconservation-iot-ugcPost-7288233162348941316-9Gq0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFByRoQBYq2PXDN6TOw5FUIH-UE8MyITrmw",
+  },
+
+   {
+    title: "CMOS Based 2:1 multiplexer with XOR Gate fault detection",
+    desc: "Designed a CMOS 2:1 multiplexer with integrated XOR-based fault detection, validated through truth table, schematic design and simulation for reliable digital switching.",
+    tech: ["cadence virtuoso", "CMOS", "Digital Logic", "Multiplexer", "Fault Detection"],
+    img: cmos2_1,
+    codeUrl: "https://github.com/Devraj9601/CMOS-Based-2-1-multiplexer-with-XOR-Gate-fault-detection.git",
+   // demoUrl: "https://www.linkedin.com/posts/ponnitivalasadevraj-i050431_innovation-wildlifeconservation-iot-ugcPost-7288233162348941316-9Gq0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFByRoQBYq2PXDN6TOw5FUIH-UE8MyITrmw",
   },
 ];
 
