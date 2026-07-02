@@ -18,13 +18,13 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "P. Devraj — ECE Student | VLSI, FPGA & IoT Engineer" },
+      { title: "Ponntitvalasa Devraj — ECE Student | VLSI, FPGA & IoT Engineer" },
       {
         name: "description",
         content:
-          "Portfolio of P. Devraj — Electronics & Communication Engineering student specializing in VLSI, FPGA, RTL Design, Physical Design and IoT. View projects, skills and resume.",
+          "Portfolio of Ponntitvalasa Devraj — Electronics & Communication Engineering student specializing in VLSI, FPGA, RTL Design, Physical Design and IoT. View projects, skills and resume.",
       },
-      { property: "og:title", content: "P. Devraj — VLSI / FPGA / IoT Portfolio" },
+      { property: "og:title", content: "Ponntitvalasa Devraj — VLSI / FPGA / IoT Portfolio" },
       { property: "og:description", content: "ECE Student • VLSI & FPGA Enthusiast • RTL Design • IoT Developer." },
       { property: "og:type", content: "website" },
     ],

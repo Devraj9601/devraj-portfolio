@@ -4,14 +4,14 @@ import { GraduationCap, Cpu, Trophy, Sparkles } from "lucide-react";
 
 const stats = [
   { label: "CGPA", value: "9.24", icon: GraduationCap },
-  { label: "Projects Completed", value: "12+", icon: Cpu },
+  { label: "Projects Completed", value: "4+", icon: Cpu },
   { label: "Hackathons", value: "2", icon: Trophy },
   { label: "Certifications", value: "8", icon: Sparkles },
 ];
 
 export function About() {
   return (
-    <Section id="about" eyebrow="About Me" title="Pursuing Physical Design engineer">
+    <Section id="about" eyebrow="About Me" title="Aspiring Physical Design Engineer">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -30 }}

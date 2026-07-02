@@ -55,7 +55,7 @@ export function Hero() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] mb-4">
-            Hi, I'm <span className="text-gradient">P. Devraj</span>
+            Hi, I'm <span className="text-gradient">Ponntitvalasa Devraj</span>
           </h1>
 
           <div className="text-2xl md:text-3xl font-display font-medium text-muted-foreground mb-6 h-10">
@@ -91,7 +91,7 @@ export function Hero() {
             {[
               { icon: Github, href: "https://github.com/Devraj9601" },
               { icon: Linkedin, href: "https://linkedin.com/in/ponnitivalasadevraj-i050431" },
-              { icon: Mail, href: "devrajp994@gmail.com" },
+              { icon: Mail, href: "https://mail.google.com/mail/?view=cm&fs=1&to=devrajp994@gmail.com"  },
             ].map((s, i) => (
               <motion.a
                 key={i}
@@ -118,7 +118,7 @@ export function Hero() {
             <div className="w-full h-full rounded-full overflow-hidden border-4 border-background">
               <img
                 src={profile}
-                alt="P. Devraj — Aspiring Physical Design Engineer with ECE Background"
+                alt="Ponntitvalasa Devraj — Aspiring Physical Design Engineer with ECE Background"
                 width={768}
                 height={768}
                 className="w-full h-full object-cover"

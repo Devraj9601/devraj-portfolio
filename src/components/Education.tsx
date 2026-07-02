@@ -1,6 +1,7 @@
 import { Section } from "./Section";
 import GIETU from "../assets/gietu.jpg";
-import schoolImage from "../assets/education-school.svg";
+import jps_school from "../assets/JPS.png";
+
 
 const education = [
   {
@@ -17,7 +18,7 @@ const education = [
     date: "2020 — 2022",
     description: "Completed higher secondary education on Physics, Chemistry, Mathematics, Biology, English, Odia.",
     score: "Percentage: 88.6%",
-    image: schoolImage,
+    image: GIETU,
   },
   {
     institution: "Jagannath Public School",
@@ -25,7 +26,7 @@ const education = [
     date: "2019 — 2020",
     description: "Studied at Jagannath Public School Gunupur; completed Class 10 board certification through ST Xavier High School.",
     score: "Percentage: 86.6%",
-    image: schoolImage,
+    image: jps_school,
   },
 ];
 

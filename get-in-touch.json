@@ -1,0 +1,189 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-5-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-5-MINI"
+        },
+        "responses": {
+          "values": [
+            {
+              "role": "system",
+              "content": "=hey you are helpful, intelligent and email writing assistant"
+            },
+            {
+              "content": "=Write a short, professional email (max 4 sentences) thanking {{ $('On form submission').item.json.Name }} for getting in touch with me. The subject received is\" {{ $('On form submission').item.json.Subject }} \" and {{ $('On form submission').item.json['Query or message'] }}.I will look on it and give you a reply. \nThank you\n{{ $('On form submission').item.json.Name }}\n\nmy name is Devraj"
+            }
+          ]
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 2.3,
+      "position": [
+        272,
+        0
+      ],
+      "id": "fa7eae4e-edca-4473-96aa-9213cd2a8cb6",
+      "name": "Message a model",
+      "credentials": {
+        "openAiApi": {
+          "id": "0Ey1gb579nz0K7yp",
+          "name": "n8n free OpenAI API credits"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('On form submission').item.json['Mail ID'] }}",
+        "subject": "=Hello!  \nreply from Devraj  {{ $('On form submission').item.json['Query or message'] }}",
+        "emailType": "text",
+        "message": "={{ $json.output[0].content[0].text }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        624,
+        0
+      ],
+      "id": "b08e0803-60b9-4399-a8cc-c6fd955230c0",
+      "name": "Send a message",
+      "webhookId": "f537b161-4e2d-4826-952c-9b4bfdf52d43",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "ZgxpKEnZVSE78uRW",
+          "name": "Gmail OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "devrajp994@gmail.com",
+        "subject": "=message form  {{ $json.Name }} through portfolio",
+        "emailType": "text",
+        "message": "=sender's name :  {{ $json.Name }}\nsender's phone no. : +{{ $json.Country }}{{ $json['Phone number'] }}\nsender's email : {{ $json['Mail ID'] }}\nquery : {{ $json['Query or message'] }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        48,
+        0
+      ],
+      "id": "2a277353-5d4b-42cc-a51e-f9e6dd2acf5b",
+      "name": "Send a message1",
+      "webhookId": "da5b10dd-a91e-4176-b7c5-7aa2eedd97f6",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "ZgxpKEnZVSE78uRW",
+          "name": "Gmail OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "6346d1f5-e3af-4061-b64c-d8bf67fa4166",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -176,
+        0
+      ],
+      "id": "01daf1fc-b0e5-4a38-b294-75bce87709f8",
+      "name": "Webhook",
+      "webhookId": "6346d1f5-e3af-4061-b64c-d8bf67fa4166"
+    }
+  ],
+  "pinData": {
+    "Message a model": [
+      {
+        "json": {
+          "output": [
+            {
+              "id": "msg_0cb29b900e2b151c006a297328edec8196a5931a2961be785c",
+              "type": "message",
+              "status": "completed",
+              "content": [
+                {
+                  "type": "output_text",
+                  "annotations": [],
+                  "logprobs": [],
+                  "text": "Subject: wildlife safety system project\n\nHi Sita,\n\nThank you for reaching out about the \"wildlife safety system project.\" I’d be happy to discuss it further—I'll review the materials and get back to you with my thoughts shortly.  \n\nBest regards,  \nDevraj"
+                }
+              ],
+              "role": "assistant"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message1": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "94de35eb-73d1-441c-a892-e36ab5ab4c61",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "981f7f57b6a77d40461ef4e33c18aa4c490c2df53c72865149ef7a2fd1f0913b"
+  },
+  "nodeGroups": [],
+  "id": "bFsR7VtM64VuBFne",
+  "tags": [
+    {
+      "updatedAt": "2026-06-09T05:21:48.598Z",
+      "createdAt": "2026-06-09T05:21:48.598Z",
+      "id": "J9Dg0nZBfzIcCcPw",
+      "name": "getintouch-portfolio"
+    }
+  ]
+}

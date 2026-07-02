@@ -50,8 +50,6 @@ export function Navbar() {
     >
       <nav className="mx-auto max-w-7xl px-6 flex items-center justify-between">
         <button onClick={() => go("home")} className="font-display font-bold text-xl tracking-tight">
-          <span className="text-gradient">P.Devraj</span>
-          <span className="text-neon">.</span>
         </button>
 
         <ul className="hidden lg:flex items-center gap-1">
