@@ -72,9 +72,7 @@ export function Skills() {
                   alt={skill.name}
                   className="h-full w-full object-cover"
                 />
-              ) : (
-                <span className="text-3xl text-neon">{skill.icon}</span>
-              )}
+              ) : null}
             </div>
             <p className="text-base font-semibold text-foreground">{skill.name}</p>
           </motion.div>
