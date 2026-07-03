@@ -836,7 +836,7 @@ const messagesFilePath = resolve(dirname(fileURLToPath(import.meta.url)), "../me
 let serverEntryPromise;
 async function getServerEntry() {
   if (!serverEntryPromise) {
-    serverEntryPromise = import("./server-k--5YBZm.js").then((n) => n.Z).then(
+    serverEntryPromise = import("./server-CE8TyJPI.js").then((n) => n.Y).then(
       (m) => m.default ?? m
     );
   }
